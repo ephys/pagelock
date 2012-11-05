@@ -7,7 +7,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 		
 			for(i in blockList) {
-				if((blockList[i] != "") && (details.url.indexOf(blockList[i]) != -1) && (details.url.indexOf("chrome-extension://") == -1)) {
+				if((blockList[i] != "") && (details.url.indexOf(blockList[i]) != -1) && (details.url.indexOf("chrome-extension://") == -1) && (url.indexOf("chrome://") == -1)) {
 					chrome.tabs.update(details.tabId, {url:"./html/forbidden.html"});
 					return {cancel: true};
 				}
@@ -23,7 +23,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 });
 
 function addBlock(url, tabId) {
-	if(url.indexOf("chrome-extension://") != -1)
+	if(url.indexOf("chrome-extension://") != -1 || url.indexOf("chrome://") != -1)
 		return false;
 
 	var blockList = [];
