@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta name="keywords" lang="fr" content="">
+	<meta name="description" content="">
+	<meta charset="utf-8"/>
+	<meta name="author" content="@EphysPotato" />
+	<title>Experimental Laboratory</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body, html {
+		height: 100%;
+		text-align: center;
+	}
+	body {
+		/* Anciens navigateurs */
+		background: darkred repeat-x top;
+		-o-background-size: 100% 100%;
+		-moz-background-size: 100% 100%;
+		-webkit-background-size: 100% 100%;
+		background-size: 100% 100%;
+		/* Navigateurs récents */
+		background: -webkit-gradient(
+			linear,
+			left top, left bottom,
+			from(maroon),
+			to(darkred)
+		);
+		background: -webkit-linear-gradient(
+			top,
+			maroon,
+			darkred
+		);
+		background: -moz-linear-gradient(
+			top,
+			maroon,
+			darkred
+		);
+		background: -o-linear-gradient(
+			top,
+			maroon,
+			darkred
+		);
+		background: linear-gradient(
+			top,
+			maroon,
+			darkred
+		);
+	}
+
+	h1 {
+		padding: 25px 0;
+		text-align: center;
+		width: 100%;
+		font-family: verdana;
+		color: white;
+		text-shadow: 2px 2px 2px #333333;
+		font-variant: small-caps;
+	}
+
+	p {
+		text-align: center;
+		width: 100%;
+		font-family: verdana;
+		color: white;
+	}
+
+	textarea {
+		width: 75%;
+		height: 60%;
+		padding: 10px;
+		margin: 10px;
+		border: none;
+	}
+
+	button {
+		width: 75%;
+		padding: 10px;
+		border: none;
+		cursor: pointer;
+	}
+
+	footer {
+		padding: 10px;
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+	</style>
+</head>
+<body>
+	<h1>Pagelock options</h1>
+	<p>Pages bloquées <small>une url par ligne</small>:</p>
+	<textarea id="blocked_pages"></textarea>
+	<button id="btn_save">Sauvegarder</button>
+	<footer><p>Copyright &copy; <a href="http://dlp.fr.nf/">DLProductions</a> 2012</p></footer>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/options.js"></script>
+</body>
